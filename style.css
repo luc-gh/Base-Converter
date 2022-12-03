@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Saira' !important;
+	font-family: "Arial";
+	color: #fff;
+}
+body{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #111;
+}
+.main{  /* div main, que tem o conteúdo e os botões */
+	display: flex;
+	align-items: center;
+	justify-content: initial;
+	flex-direction: column;
+}
+.tela sup{
+	color: #11ed21;
+	display: flex;
+	position: relative;
+	overflow: visible;
+	box-sizing: content-box;
+	font-weight: bold;
+	font-size: 95%;
+	transform: translateY(2.5rem);
+	margin-left: 23px;
+	user-select: none;
+}
+.tela #valor{
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+  width: 25rem;
+  height: 5rem;
+  line-height: 5rem;
+  overflow: none;
+  box-shadow: inset 5px 5px 8px rgba(2,2,2,0.95), inset -5px -5px 16px rgba(207,207,207,0.1) !important; 
+  /* !important: define esse estilo como prioridade */
+  /* box-shadow: define a cor de sobreado presente dentro do elemento, nesse caso, primeiro no sentido 'topo-esquerda'
+  e depois no sentido 'base-direita' ('inset' define que as propriedades serão aplicadas internamente, no elemento) */
+  margin: 0.5rem;
+  padding: 0 1.1rem;
+  border-radius: 0.8rem;
+  user-select: none;
+  text-shadow: #595959 2.5px 0 6px; 
+}
+.botoes{
+	display: inline-flex;
+	flex-direction: row;
+	margin: 5px;
+	flex-wrap: wrap;
+}
+.espaco{  /* classe relativa aos blocos de botões */
+	position: relative;
+	display: inline;
+	padding: 1em;
+	margin: 1rem;
+}
+.scy{
+	position: relative;
+	display: grid;
+	gap: 2rem;  /* distância de margem relativa entre os itens do grid */
+	grid-template-columns: repeat(2, 1fr);  /* repete 3 itens por coluna */
+	transform: translateY(8px);
+}
+.simbolos{
+	position: relative;
+	display: grid;
+	gap: 1.8rem;
+	grid-template-columns: repeat(2, 1fr);
+	transform: translateY(8px);
+}
+.numeros{
+	position: relative;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(3, 4fr);
+}
+.conversoes{
+	position: relative;
+	display: grid;
+	gap: 0.8rem;
+	grid-template-columns: repeat(1, 1fr);
+	justify-items: center;
+}
+.c{
+	color: #11ed21;
+	outline: 1px solid #11ed21;
+	cursor: pointer;
+}
+.bt, .c,  .b, .o{  /* botões no estilo PADRÃO*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-weight: bold;
+	box-sizing: revert-layer;
+	border-radius: 5px;
+	width: 100%;
+	height: 1.7em;
+	margin: 2px;
+	padding: 0.2em;
+	transition: background-color 0.3s !important;
+	transition: box-shadow 0.3s ease-in-out;
+	user-select: none;
+}
+.bt:hover, .c:hover, .b:hover, .o:hover{  /* cursor sobre os botões */
+	background-color: #11ed21 !important;
+	color: #000 !important;
+}
+.conv{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-weight: bold;
+	box-sizing: revert-layer;
+	border-radius: 5px;
+	width: 100%;
+	height: 1.7em;
+	margin: 2px;
+	padding: 0.2em;
+	user-select: none;
+
+	color: #11ed21;
+	border: 1px solid #11ed21;
+	cursor: pointer;
+	transition: box-shadow 0.39s ease-in-out;
+}
+.conv:hover{
+	box-shadow: inset 0px 0 0 0 #fff, inset 7.5em 0 0 0 #11ed21 !important;
+	color: #000;
+}
+.df{
+	font-family: serif !important;
+}
+
+/* estilo dos botões para as bases bin, oct, dec e hex isoladamente (estilo MODIFICADO) */
+.bin .b{
+	outline: 1px solid #11ed21;
+	cursor: pointer;
+	color: #11ed21;
+}
+.bin .bt, .bin .o{
+	outline: 1px solid #333;	
+	cursor: none;
+	pointer-events: none;
+	color: #333;
+}
+.dec .bt, .dec .b, .dec .o{
+	color: #11ed21;
+	outline: 1px solid #11ed21;
+	cursor: pointer;
+}
+.oct .bt{
+	outline: 1px solid #333;
+	color: #333;
+	pointer-events: none;
+	cursor: none;
+}
+.oct .b, .oct .o{
+	outline: 1px solid #11ed21;
+	color: #11ed21;
+	cursor: pointer;
+}
+.hex .bt, .hex .b, .hex .o{
+	color: #333;
+	outline: 1px solid #333;
+	pointer-events: none;
+	cursor: none;
+}
+
+.dec .superior{
+	color: #070;
+	font-weight: bold;
+}
+.bin .superior, .oct .superior, .hex .superior{
+	color: #333;
+}
+
+footer{
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	color: #fff;
+	margin: 2px;
+	padding: 2px;
+	transform: translateY(18em);
+}
+footer a{
+	text-decoration: none;
+	color: #999;
+}

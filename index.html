@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Arnaldo Lucas Santos Duarte (github.com/luc-gh)">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="main.js" defer></script>
+	<title>Calculadora</title>
+</head>
+<body onload="toggle()">
+	<div class="main">
+		<section id="tela" class="tela secao">
+			<sup>DEC</sup>
+			<h2 id="valor"></h2>
+		</section>
+		<section id="botoes" class="botoes secao">
+			<div class="scy espaco">
+				<span class="bt">(</span>
+				<span class="bt">)</span>
+				<span class="bt">1/x</span>
+				<span class="bt">π</span>
+				<span class="bt">e</span>
+				<span class="bt">a<sup><sup class="superior">b</sup></sup></span>
+			</div>
+			<div class="simbolos espaco">
+				<span class="c">C</span>
+				<span class="bt df">+</span>
+				<span class="bt">%</span>
+				<span class="bt">×</span>
+				<span class="bt">=</span>
+				<span class="bt">÷</span>
+			</div>
+			<div class="numeros espaco">
+				<span class="o">7</span>
+				<span class="bt">8</span>
+				<span class="bt">9</span>
+				<span class="o">4</span>
+				<span class="o">5</span>
+				<span class="o">6</span>
+				<span class="b">1</span>
+				<span class="o">2</span>
+				<span class="o">3</span>
+				<span class="b">0</span>
+				<span class="bt">.</span>
+				<span class="bt">±</span>
+			</div>
+			<div class="conversoes espaco">
+				<p class="conv" onclick="outSup(2, valorAtual())">BIN</p>
+				<p class="conv" onclick="outSup(8, valorAtual())">OCT</p>
+				<p class="conv" onclick="outSup(10, valorAtual())">DEC</p>
+				<p class="conv" onclick="outSup(16, valorAtual())">HEX</p>
+			</div>
+		</section>
+	</div>
+	<footer>
+		© Arnaldo Lucas (<a href="github.com/luc-gh">luc-gh</a>) - Github Pages - MIT License
+	</footer>
+</body>
+</html>
